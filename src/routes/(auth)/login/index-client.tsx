@@ -31,11 +31,6 @@ export default component$(() => {
   const passwordError = useComputed$(() => {
     return formState.formPosted && formState.password.length < 6;
   });
-
-  // const isFormValid = useComputed$(() => {
-  //   return !emailError.value && !passwordError.value;
-  // });
-
   return (
     <form class="login-form" preventdefault:submit onSubmit$={onSubmit}>
       <div class="relative">
